@@ -1,0 +1,9 @@
+<%= render 'users_nav' %>
+
+  <% @user.leaders.each do |leader| %>
+  <div class="d-flex justify-content-center align-items-center mt-4">
+    <li>
+      <%= link_to leader.username, user_path(leader.username) %>
+    </li>
+  </div>
+  <% end %>
