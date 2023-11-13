@@ -1,0 +1,9 @@
+<%= render 'users_nav' %>
+
+<ul>
+  <% @user.leaders.each do |leader| %>
+    <% leader.own_photos.each do |photo| %>
+      <%= render "photos/photo", photo: photo %>
+    <% end %>
+  <% end %>
+</ul>
